@@ -107,7 +107,7 @@ internal class Program
         Console.WriteLine();
         bool achou = filaBanco.Contains("José");
 
-        if (achou == true)
+        if (achou)
         {
             Console.WriteLine("A pessoa está na fila");
         }
@@ -116,6 +116,29 @@ internal class Program
             Console.WriteLine("A pessoa não está na fila");
         }
 
-        
+        //Trabalhando com Pilha (Stack)
+        //Criando um Pilha
+        Console.WriteLine();
+
+        Stack<string> livros = new Stack<string>();
+        //Adicionando elementos eem uma Pilha
+        livros.Push("Maus");
+        livros.Push("O Menino do Pijama Listrado");
+        livros.Push("O Tatuador de Auschwitz");
+
+        foreach (var livro in livros)
+        {
+            Console.WriteLine(livro);
+        }
+
+        //Remove os elementos da Pilha
+        livros.Pop();
+        Console.WriteLine();
+
+        foreach (var livro in livros)
+        {
+            Console.WriteLine(livro);
+        }
+
     }
 }
