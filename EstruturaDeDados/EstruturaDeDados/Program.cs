@@ -56,5 +56,25 @@ internal class Program
         //Apagar todos os elementos da Lista
 
         frutas.Clear();
+
+        Console.WriteLine();
+
+
+
+        //Trabalhando com Dicionário (Dictionary)
+
+        //Criando um Dicionário de Dados
+        Dictionary<int, string> carros = new Dictionary<int, string>();
+        //Adicionar Dados a um Dicionário
+        carros.Add(5, "Corsa");
+        carros.Add(10, "Fusca");
+        carros.Add(2, "Forda Ka");
+
+        //Imprimindo um Dicionário de Dados
+
+        foreach (var carro in carros)
+        {
+            Console.WriteLine($"{carro.Key} - {carro.Value}");
+        }
     }
 }
