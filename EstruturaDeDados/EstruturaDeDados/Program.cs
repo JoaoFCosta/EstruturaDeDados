@@ -76,5 +76,46 @@ internal class Program
         {
             Console.WriteLine($"{carro.Key} - {carro.Value}");
         }
+
+        //Trabalhando com FILA
+        Console.WriteLine();
+        //Criando uma Fila (QUEUE)
+        Queue<string> filaBanco = new Queue<string>();
+
+        //Adicionar elementos em uma Fila
+        filaBanco.Enqueue("André");
+        filaBanco.Enqueue("João");
+        filaBanco.Enqueue("Maria");
+        filaBanco.Enqueue("José");
+        filaBanco.Enqueue("Sebastião");
+
+        foreach (var pessoa in filaBanco)
+        {
+            Console.WriteLine(pessoa);
+        }
+
+        //Retirar o primeiro elemento de uma fila
+        Console.WriteLine();
+        filaBanco.Dequeue();
+
+        foreach (var pessoa in filaBanco)
+        {
+            Console.WriteLine(pessoa);
+        }
+
+        //Verificar se existe um elemento na Fila
+        Console.WriteLine();
+        bool achou = filaBanco.Contains("José");
+
+        if (achou == true)
+        {
+            Console.WriteLine("A pessoa está na fila");
+        }
+        else
+        {
+            Console.WriteLine("A pessoa não está na fila");
+        }
+
+        
     }
 }
